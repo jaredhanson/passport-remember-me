@@ -51,9 +51,6 @@ authenticate requests.
 This is typically used in an application's middleware stack, to log the user
 back in the next time they visit any page on your site.  For example:
 
-For example, as route middleware in an [Express](http://expressjs.com/)
-application:
-
     app.configure(function() {
       app.use(express.cookieParser());
       app.use(express.bodyParser());
@@ -68,6 +65,28 @@ Note that `passport.session()` should be mounted *above* `remember-me`
 authentication, so that tokens aren't exchanged for currently active login
 sessions.
 
+#### Setting the Remember Me Cookie
+
+If the user enables "remember me" mode, an initial cookie should be set when
+they login.
+
+    app.post('/login', 
+      passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }),
+      function(req, res, next) {
+        // issue a remember me cookie if the option was checked
+        if (!req.body.remember_me) { return next(); }
+    
+        var token = utils.generateToken(64);
+        Token.save(token, { userId: req.user.id }, function(err) {
+          if (err) { return done(err); }
+          res.cookie('remember_me', token, { path: '/', httpOnly: true, maxAge: 604800000 }); // 7 days
+          return next();
+        });
+      },
+      function(req, res) {
+        res.redirect('/');
+      });
+
 ## Examples
 
 For a complete, working example, refer to the [login example](https://github.com/jaredhanson/passport-remember-me/tree/master/examples/login).
@@ -77,7 +96,7 @@ For a complete, working example, refer to the [login example](https://github.com
     $ npm install
     $ make test
 
-[![Build Status](https://secure.travis-ci.org/jaredhanson/passport-remember-me.png)](http://travis-ci.org/jaredhanson/passport-local)
+[![Build Status](https://secure.travis-ci.org/jaredhanson/passport-remember-me.png)](http://travis-ci.org/jaredhanson/passport-remember-me)
 
 ## Credits
 
