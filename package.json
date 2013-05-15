@@ -1,6 +1,6 @@
 {
   "name": "passport-remember-me",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Remember Me cookie authentication strategy for Passport.",
   "keywords": ["passport", "cookie", "persistent", "rememberme", "auth", "authn", "authentication"],
   "repository": {
