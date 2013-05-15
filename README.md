@@ -87,6 +87,20 @@ they login.
         res.redirect('/');
       });
 
+#### Security Considerations
+
+If not managed correctly, using a "remember me" cookie for automatic
+authentication increases a service's exposure to potential security threats.
+There are a number of techniques to reduce and mitigate these threats, and it
+is a matter of application-level policy to asses the level of risk and implement
+appropriate counter measures.
+
+The following list is recommended reading for understanding these risks:
+
+- [The definitive guide to forms based website authentication](http://stackoverflow.com/questions/549/the-definitive-guide-to-forms-based-website-authentication)
+- [Persistent Login Cookie Best Practice](http://fishbowl.pastiche.org/2004/01/19/persistent_login_cookie_best_practice/)
+- [Improved Persistent Login Cookie Best Practice](http://jaspan.com/improved_persistent_login_cookie_best_practice) [(archive)](http://web.archive.org/web/20130214051957/http://jaspan.com/improved_persistent_login_cookie_best_practice)
+
 ## Examples
 
 For a complete, working example, refer to the [login example](https://github.com/jaredhanson/passport-remember-me/tree/master/examples/login).
