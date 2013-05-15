@@ -166,6 +166,9 @@ app.get('/login', function(req, res){
 app.post('/login', 
   passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }),
   function(req, res, next) {
+    // Issue a remember me cookie if the option was checked
+    if (!req.body.remember_me) { return next(); }
+    
     issueToken(req.user, function(err, token) {
       if (err) { return next(err); }
       res.cookie('remember_me', token, { maxAge: 900000, httpOnly: true });
