@@ -171,7 +171,7 @@ app.post('/login',
     
     issueToken(req.user, function(err, token) {
       if (err) { return next(err); }
-      res.cookie('remember_me', token, { maxAge: 900000, httpOnly: true });
+      res.cookie('remember_me', token, { path: '/', httpOnly: true, maxAge: 604800000 });
       return next();
     });
   },
