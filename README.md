@@ -1,6 +1,6 @@
 # Passport-Remember Me
 
-Extends the [passport-remember-me](https://github.com/jaredhanson/passport-remember-me) strategy to include support for signed cookies and the `passReqToCallback` option per pending change requests. Also swaps the dependency from passport to passport-strategy.
+Extends the [passport-remember-me](https://github.com/jaredhanson/passport-remember-me) strategy to include support for signed cookies and the `passReqToCallback` option per pending change requests. Also updates the dependency for passport to 0.3.x.
 
 [Passport](http://passportjs.org/) strategy for authenticating based on a
 remember me cookie.
