@@ -1,5 +1,5 @@
 {
-  "name": "passport-remember-me",
+  "name": "passport-remember-me-extended",
   "version": "0.0.2",
   "description": "Remember Me cookie authentication strategy for Passport.",
   "keywords": ["passport", "cookie", "persistent", "rememberme", "auth", "authn", "authentication"],
