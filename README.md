@@ -1,4 +1,4 @@
-# Passport-Remember Me
+# Passport-Remember Me Extended
 
 Extends the [passport-remember-me](https://github.com/jaredhanson/passport-remember-me) strategy to include support for signed cookies and the `passReqToCallback` option per pending change requests. Also updates the dependency for passport to 0.3.x.
 
@@ -13,7 +13,7 @@ middleware, including [Express](http://expressjs.com/).
 
 ## Install
 
-    $ npm install passport-remember-me
+    $ npm install passport-remember-me-extended
 
 ## Usage
 
