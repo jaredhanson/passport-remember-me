@@ -1,19 +1,19 @@
 {
-  "name": "passport-remember-me",
-  "version": "0.0.1",
+  "name": "passport-remember-me-extended",
+  "version": "0.0.2",
   "description": "Remember Me cookie authentication strategy for Passport.",
   "keywords": ["passport", "cookie", "persistent", "rememberme", "auth", "authn", "authentication"],
   "repository": {
     "type": "git",
-    "url": "git://github.com/jaredhanson/passport-remember-me.git"
+    "url": "git://github.com/dereklakin/passport-remember-me"
   },
   "bugs": {
-    "url": "http://github.com/jaredhanson/passport-remember-me/issues"
+    "url": "http://github.com/dereklakin/passport-remember-me/issues"
   },
   "author": {
-    "name": "Jared Hanson",
-    "email": "jaredhanson@gmail.com",
-    "url": "http://www.jaredhanson.net/"
+    "name": "Derek Lakin",
+    "email": "derek.lakin@outlook.com",
+    "url": "http://www.dereklakin.com/"
   },
   "licenses": [ {
     "type": "MIT",
@@ -22,7 +22,7 @@
   "main": "./lib",
   "dependencies": {
     "pkginfo": "0.2.x",
-    "passport": "~0.1.1"
+    "passport": "0.3.x"
   },
   "devDependencies": {
     "mocha": "1.x.x",
