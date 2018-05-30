@@ -7,7 +7,7 @@ This module lets you authenticate using a remember me cookie (aka persistent
 login) in your Node.js applications.  By plugging into Passport, remember me
 authentication can be easily and unobtrusively integrated into any application
 or framework that supports [Connect](http://www.senchalabs.org/connect/)-style
-middleware, including [Express](http://expressjs.com/).
+middleware, including [Express](http://expressjs.com/) and [Koa](http://koajs.com).
 
 ## Install
 
