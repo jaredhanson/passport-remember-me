@@ -22,7 +22,7 @@
   "main": "./lib",
   "dependencies": {
     "pkginfo": "0.2.x",
-    "passport-strategy": "1.0.0"
+    "passport-strategy": "1.x.x"
   },
   "devDependencies": {
     "mocha": "1.x.x",
