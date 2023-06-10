@@ -1,4 +1,4 @@
-exports.randomString = function(len) {
+export function randomString(len) {
   var buf = []
     , chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     , charlen = chars.length;
