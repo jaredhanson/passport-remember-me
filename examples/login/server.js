@@ -187,7 +187,7 @@ app.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-app.listen(3001, function() {
+app.listen(3000, function() {
   console.log('Express server listening on port 3000');
 });
 
