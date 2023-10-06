@@ -9,6 +9,8 @@ authentication can be easily and unobtrusively integrated into any application
 or framework that supports [Connect](http://www.senchalabs.org/connect/)-style
 middleware, including [Express](http://expressjs.com/).
 
+This fork was done in order to update obsolete dependencies and update the syntax, no functional changes were made.
+
 ## Install
 
     $ npm install @mondemen/passport-remember-me
