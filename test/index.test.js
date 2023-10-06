@@ -1,14 +1,10 @@
-var rememberme = require('index');
-
+import {expect} from "chai";
+import {Strategy} from '../lib/index.js'
 
 describe('passport-remember-me', function() {
-    
-  it('should export version', function() {
-    expect(rememberme.version).to.be.a('string');
-  });
-    
+
   it('should export Strategy', function() {
-    expect(rememberme.Strategy).to.be.a('function');
+    expect(Strategy).to.be.a('function');
   });
-  
+
 });

@@ -1,7 +1,8 @@
 {
-  "name": "passport-remember-me",
-  "version": "0.0.1",
+  "name": "@mondemen/passport-remember-me",
+  "version": "0.1.2",
   "description": "Remember Me cookie authentication strategy for Passport.",
+  "types": "./lib/types.d.ts",
   "keywords": ["passport", "cookie", "persistent", "rememberme", "auth", "authn", "authentication"],
   "repository": {
     "type": "git",
@@ -17,19 +18,18 @@
   },
   "licenses": [ {
     "type": "MIT",
-    "url": "http://www.opensource.org/licenses/MIT" 
+    "url": "http://www.opensource.org/licenses/MIT"
   } ],
-  "main": "./lib",
+  "main": "./lib/index.js",
   "dependencies": {
-    "pkginfo": "0.2.x",
-    "passport": "~0.1.1"
+    "passport-strategy": "1.0.0"
   },
   "devDependencies": {
-    "mocha": "1.x.x",
-    "chai": "1.x.x"
+    "mocha": "10.x.x",
+    "chai": "4.x.x"
   },
   "scripts": {
-    "test": "NODE_PATH=./lib node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
+    "test": "NODE_PATH=./lib node_modules/.bin/mocha --reporter spec test/*.test.js"
   },
-  "engines": { "node": ">= 0.4.0" }
+  "engines": { "node": ">= 14.0.0" }
 }
