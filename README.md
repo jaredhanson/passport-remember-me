@@ -11,7 +11,7 @@ middleware, including [Express](http://expressjs.com/).
 
 ## Install
 
-    $ npm install passport-remember-me
+    $ npm install @mondemen/passport-remember-me
 
 ## Usage
 
@@ -60,7 +60,7 @@ back in the next time they visit any page on your site.  For example:
       app.use(passport.authenticate('remember-me'));
       app.use(app.router);
     });
-    
+
 Note that `passport.session()` should be mounted *above* `remember-me`
 authentication, so that tokens aren't exchanged for currently active login
 sessions.
@@ -70,12 +70,12 @@ sessions.
 If the user enables "remember me" mode, an initial cookie should be set when
 they login.
 
-    app.post('/login', 
+    app.post('/login',
       passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }),
       function(req, res, next) {
         // issue a remember me cookie if the option was checked
         if (!req.body.remember_me) { return next(); }
-    
+
         var token = utils.generateToken(64);
         Token.save(token, { userId: req.user.id }, function(err) {
           if (err) { return done(err); }
