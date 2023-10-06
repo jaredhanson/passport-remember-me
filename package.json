@@ -1,6 +1,6 @@
 {
   "name": "@mondemen/passport-remember-me",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Remember Me cookie authentication strategy for Passport.",
   "types": "./lib/types.d.ts",
   "keywords": ["passport", "cookie", "persistent", "rememberme", "auth", "authn", "authentication"],
